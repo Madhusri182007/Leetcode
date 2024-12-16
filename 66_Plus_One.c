@@ -1,6 +1,3 @@
-/**
- * Note: The returned array must be malloced, assume caller calls free().
- */
 int* plusOne(int* digits, int digitsSize, int* returnSize)
 {
     int i=digitsSize-1,f=0;
