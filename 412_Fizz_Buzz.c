@@ -1,6 +1,3 @@
-/**
- * Note: The returned array must be malloced, assume caller calls free().
- */
 char** fizzBuzz(int n, int* returnSize) {
     *returnSize=n;
     char **t=(char**)malloc(sizeof(char*)*n);
@@ -14,12 +11,10 @@ char** fizzBuzz(int n, int* returnSize) {
         {
             t[i]="Fizz";
         }
-       
        else if((i+1)%5==0)
        {
         t[i]="Buzz";
        }
-      
         else
         {
              char b[10];
