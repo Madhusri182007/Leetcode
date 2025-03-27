@@ -1,0 +1,24 @@
+bool checkAlmostEquivalent(char* word1, char* word2) {
+   int fre[27]={0};
+   int fre1[27]={0};
+   for(int i=0;word1[i]!='\0';i++)
+   {
+         fre[word1[i]-'a'+1]++;
+   }
+   for(int i=0;word2[i]!='\0';i++)
+   {
+         fre1[word2[i]-'a'+1]++;
+   }
+   for(int i=1;i<=26;i++)
+   {
+         if(fre[i]!=0||fre1[i]!=0)
+         {
+            int k=abs(fre[i]-fre1[i]);
+            if(k>3)
+            {
+                return false;
+            }
+         }
+   }
+   return true;
+}
